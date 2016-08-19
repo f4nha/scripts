@@ -1,0 +1,7 @@
+#Alias
+conf t
+alias exec shit show int status
+alias exec shtr show int trunk
+alias exec shri show run int
+alias exec free show int | i proto.*notconnect|proto.*administratively down|Last in.* [6-9]w|Last in.*[0-9][0-9]w|[0-9]y|Last input never, output never, output hang never
+alias exec shib show ip int brief
