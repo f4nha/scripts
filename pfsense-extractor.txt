@@ -1,0 +1,141 @@
+{
+  "extractors": [
+    {
+      "condition_type": "regex",
+      "condition_value": "^filterlog:.*,(in|out),4,.*",
+      "converters": [],
+      "cursor_strategy": "copy",
+      "extractor_config": {
+        "index": 17,
+        "split_by": ","
+      },
+      "extractor_type": "split_and_index",
+      "order": 0,
+      "source_field": "message",
+      "target_field": "pfsense_filter_proto",
+      "title": "pfSense - Protocol"
+    },
+    {
+      "condition_type": "regex",
+      "condition_value": "^filterlog:.*,(in|out),4,.*",
+      "converters": [],
+      "cursor_strategy": "copy",
+      "extractor_config": {
+        "index": 19,
+        "split_by": ","
+      },
+      "extractor_type": "split_and_index",
+      "order": 0,
+      "source_field": "message",
+      "target_field": "pfsense_filter_sourceip",
+      "title": "pfSense - Source IP"
+    },
+    {
+      "condition_type": "regex",
+      "condition_value": "^filterlog:.*,(in|out),4,.*",
+      "converters": [],
+      "cursor_strategy": "copy",
+      "extractor_config": {
+        "index": 7,
+        "split_by": ","
+      },
+      "extractor_type": "split_and_index",
+      "order": 0,
+      "source_field": "message",
+      "target_field": "pfsense_filter_action",
+      "title": "pfSense - Action"
+    },
+    {
+      "condition_type": "regex",
+      "condition_value": "^filterlog:.*,(in|out),4,.*",
+      "converters": [],
+      "cursor_strategy": "copy",
+      "extractor_config": {
+        "index": 20,
+        "split_by": ","
+      },
+      "extractor_type": "split_and_index",
+      "order": 0,
+      "source_field": "message",
+      "target_field": "pfsense_filter_destip",
+      "title": "pfSense - Destination IP"
+    },
+    {
+      "condition_type": "regex",
+      "condition_value": "^filterlog:.*,(in|out),4,.*",
+      "converters": [],
+      "cursor_strategy": "copy",
+      "extractor_config": {
+        "index": 21,
+        "split_by": ","
+      },
+      "extractor_type": "split_and_index",
+      "order": 0,
+      "source_field": "message",
+      "target_field": "pfsense_filter_sourceport",
+      "title": "pfSense - Source Port"
+    },
+    {
+      "condition_type": "regex",
+      "condition_value": "^filterlog:.*,(in|out),4,.*",
+      "converters": [],
+      "cursor_strategy": "copy",
+      "extractor_config": {
+        "index": 22,
+        "split_by": ","
+      },
+      "extractor_type": "split_and_index",
+      "order": 0,
+      "source_field": "message",
+      "target_field": "pfsense_filter_destport",
+      "title": "pfSense - Destination Port"
+    },
+    {
+      "condition_type": "regex",
+      "condition_value": "^filterlog:.*,(in|out),4,.*",
+      "converters": [],
+      "cursor_strategy": "copy",
+      "extractor_config": {
+        "index": 8,
+        "split_by": ","
+      },
+      "extractor_type": "split_and_index",
+      "order": 0,
+      "source_field": "message",
+      "target_field": "pfsense_filter_direction",
+      "title": "pfSense - Direction"
+    },
+    {
+      "condition_type": "regex",
+      "condition_value": "^filterlog:.*,(in|out),4,.*",
+      "converters": [],
+      "cursor_strategy": "copy",
+      "extractor_config": {
+        "index": 5,
+        "split_by": ","
+      },
+      "extractor_type": "split_and_index",
+      "order": 0,
+      "source_field": "message",
+      "target_field": "pfsense_filter_ingress",
+      "title": "pfSense - Ingress Interface"
+    },
+    {
+      "condition_type": "regex",
+      "condition_value": "^filterlog:.*,(in|out),4,.*",
+      "converters": [],
+      "cursor_strategy": "copy",
+      "extractor_config": {
+        "regex": "^filterlog: ([1-9]+),.*$",
+        "replacement": "$1",
+        "replace_all": false
+      },
+      "extractor_type": "regex_replace",
+      "order": 0,
+      "source_field": "message",
+      "target_field": "pfsense_filter_rulenum",
+      "title": "pfSense - Rule Number"
+    }
+  ],
+  "version": "1.3.0 (04201bb)"
+}
